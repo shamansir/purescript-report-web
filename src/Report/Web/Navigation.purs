@@ -22,6 +22,8 @@ type NavigatedTo subj_id = -- TODO: add subj_idect, add tabular key
     , mbEditing :: Maybe { what :: M.WhatKey, value :: EncodedValue }
     }
 
+
+
 -- FIXME: store the Location directly in NavigatedTo instead of computing it on the fly;
 --        on the other hand, though, it easier to just set `Maybe`s from the UI itself
 --        and then manage the consistency / inconsistency in one place here;
