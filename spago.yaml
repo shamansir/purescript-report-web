@@ -1,0 +1,44 @@
+package:
+  name: report-web
+  dependencies:
+    - console
+    - effect
+    - either
+    - halogen
+    - halogen-svg-elems
+    - maybe
+    - newtype
+    - prelude
+    - report
+    - strings
+    - tuples
+    - web-events
+    - web-html
+    - web-uievents
+    - yoga-json
+  test:
+    main: Test.Main
+    dependencies:
+      - spec
+      - spec-node
+      - affjax
+      - affjax-node
+      - affjax-web
+      - fetch
+      - debug
+      - fetch-yoga-json
+workspace:
+  packageSet:
+    registry: 68.10.1
+  extraPackages:
+    report:
+      # git: https://github.com/shamansir/purescript-report.git
+      # ref: <commit>
+      path: ../purescript-report
+    # the dependencies of `report` which are not in the registry
+    yoga-tree-utils:
+      git: https://github.com/shamansir/purescript-yoga-tree-utils.git
+      ref: 201106f76144be0ee48b87c0df6493f46aad214d
+    dotlang:
+      git: https://github.com/shamansir/purescript-dotlang.git
+      ref: b40e6aeb3b4a03499011182d0d7b5936f3c72c30
